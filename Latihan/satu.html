@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title>Biodata</title>
+</head>
+<body>
+	<div class="header">
+		<h>Javascript</h>
+		<p>Website ini dibuat untuk tujuan pembelajaran</p>
+	</div>
+	<div class="topnav">
+		<a href="main.html">Home</a>
+		<a href="satu.html">Pertama</a>
+		<a href="dua.html">Kedua</a>
+	</div>
+	<button onclick="document.getElementById('myImage').src='Image/sar.png'"><<<</button>
+
+	<img id="myImage" src="Image/sarr.png" style="width:400px">
+
+	<button onclick="document.getElementById('myImage').src='Image/sarr.png'">>>></button>
+
+	<p id="inerhtml"></p>
+	<p id="fungsi"></p>
+	<p id="objek"></p>
+	<script>
+		var a, b, c;
+		a = 5;
+		b = 10;
+		c = a*b;
+		document.getElementById("inerhtml").innerHTML = "Latihan Variabel : "+c;
+		//fungsi
+		function pertambahan(p1,p2){
+			return p1+p2;
+		}
+		document.getElementById("fungsi").innerHTML = "Latihan Fungsi : "+ pertambahan(10,11);
+		//objek oriented
+		var person = {
+			firstName : "Muhammad",
+			lastName : "Ziad",
+			full : function(){
+				return this.firstName + " " + this.lastName;
+			}
+		};
+		document.getElementById("objek").innerHTML = "Latihan Obek Oriented : " + person.full();
+	</script>
+</body>
+</html>

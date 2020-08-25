@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title>Biodata</title>
+</head>
+<body>
+	<div class="header">
+		<h>Program JS</h>
+		<p>Website ini dibuat untuk tujuan pembelajaran</p>
+	</div>
+	<div class="topnav">
+		<a href="main.html">Home</a>
+		<a href="satu.html">Pertama</a>
+		<a href="dua.html">Kedua</a>
+	</div>
+	<h1>Aksi Reaksi</h1>
+	<input id="angka1" required>
+	<input id="angka2" required>
+	<button type="button" onclick="perkalian()">Kalikan</button>
+	<p id="hasil"></p>
+
+	<script>
+		function perkalian(){
+			var x, y, text;
+			x = document.getElementById("angka1").value;
+			y = document.getElementById("angka2").value;
+			if(isNaN(x)||isNaN(y)){
+				alert("please input number");
+			}else{
+				text = "Hasil : " + (x*y);
+			}
+			document.getElementById("hasil").innerHTML = text;
+		}
+	</script>
+
+</body>
+</html>
